@@ -60,7 +60,7 @@
     }
     NSDictionary *entry = [self.students objectAtIndex:indexPath.row];
     cell.textLabel.text = [entry objectForKey:@"name"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"@%@ [%@]", [entry objectForKey:@"app"],[entry objectForKey:@"youtube"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ [%@]", [entry objectForKey:@"app"],[entry objectForKey:@"youtube"]];
     
     return cell;
 }
