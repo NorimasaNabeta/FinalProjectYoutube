@@ -30,8 +30,10 @@
     [super viewDidLoad];
     NSString *title = @"CodingTogetherSummer2012";
     NSURL *url = [[NSBundle mainBundle] URLForResource:title withExtension:@"plist"];
-    self.students = [[NSArray alloc] initWithContentsOfURL:url];
-    self.title = title;
+
+    NSDictionary *plist = [[NSDictionary alloc] initWithContentsOfURL:url];
+    self.students = [plist objectForKey:@"students"];
+    self.title = [plist objectForKey:@"description"];
 }
 
 - (void)viewDidUnload

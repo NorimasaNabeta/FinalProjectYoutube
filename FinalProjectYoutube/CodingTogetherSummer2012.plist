@@ -1,111 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-<array>
-	<dict>
-		<key>name</key><string>Thomas P</string>
-		<key>app</key><string>DrinkMixer</string>
-		<key>youtube</key><string>Q-6HiabgIKc</string>
-	</dict>
-
-	<dict>
-		<key>name</key><string>Daniele Bernardini</string>
-		<key>app</key><string>Check My Dress</string>
-		<key>youtube</key><string>0tVxuzcsET8</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Luca Kaufmann</string>
-		<key>app</key><string>TumbleBoard</string>
-		<key>youtube</key><string>0DudxIr6Rks</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Martin Mandl</string>
-		<key>app</key><string>eaGeierApp</string>
-		<key>youtube</key><string>zBqV0cBc_-s</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Don Waters</string>
-		<key>app</key><string>IOS Counter1</string>
-		<key>youtube</key><string>y9of0pEh_CA</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Wolfgang Kamradek</string>
-		<key>app</key><string>iKeepHerHappy</string>
-		<key>youtube</key><string>UyyWFkiWYtY</string>
-	</dict>
-
-	<dict>
-		<key>name</key><string>Kalin Zahariev</string>
-		<key>app</key><string>Minetris</string>
-		<key>youtube</key><string>jtHxW0ciHwo</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Gerd Moe-Behrens</string>
-		<key>app</key><string>TeamUpSmart</string>
-		<key>youtube</key><string>Rvd4lZsgBq4</string>
-	</dict>
-	<dict>
-		<key>name</key><string>S.RAZA</string>
-		<key>app</key><string>Stint</string>
-		<key>youtube</key><string>YSH3Vg8EixI</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Chris Johnson Bidler</string>
-		<key>app</key><string>Haik</string>
-		<key>youtube</key><string>APNKYMl-Tfk</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Mark Schwenk</string>
-		<key>app</key><string>WellThot Note</string>
-		<key>youtube</key><string>rVsm9lf4oTk</string>
-	</dict>
-	<dict>
-		<key>name</key><string>JimBudet</string>
-		<key>app</key><string>MinDcard</string>
-		<key>youtube</key><string>jewARKmA_Ww</string>
-	</dict>
-
-
-	<dict>
-		<key>name</key><string>Ravi Alla</string>
-		<key>app</key><string>UTATracker</string>
-		<key>youtube</key><string>qnYChkXx75o</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Laura Gutman</string>
-		<key>app</key><string>buffalo reader</string>
-		<key>youtube</key><string>xgGAFswcWJU</string>
-	</dict>
-
-	<dict>
-		<key>name</key><string>John Davison</string>
-		<key>app</key><string>Chronounce</string>
-		<key>youtube</key><string>ZkS7pHyUg90</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Sven Charleer</string>
-		<key>app</key><string>TennisAssist</string>
-		<key>youtube</key><string>UClFSD_gxR0</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Drew Rosenberg</string>
-		<key>app</key><string>The Happy Teacher Readers Workshop</string>
-		<key>youtube</key><string>yheohEwVZRE</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Taylor Halliday</string>
-		<key>app</key><string>WorkrHelpr</string>
-		<key>youtube</key><string>DLAZm4WIifw</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Daniele Bernardini</string>
-		<key>app</key><string>CheckMyDress</string>
-		<key>youtube</key><string>kW9sVSeuc58</string>
-	</dict>
-	<dict>
-		<key>name</key><string>Rob Woodgate</string>
-		<key>app</key><string>Yachtie</string>
-		<key>youtube</key><string>uWixtDx1r7Y</string>
-	</dict>
-</array>
+<dict>
+	<key>date</key>
+	<date>2012-08-31T11:26:54Z</date>
+	<key>description</key>
+	<string>Stanford CS193p 2011Fall</string>
+	<key>students</key>
+	<array>
+		<dict>
+			<key>app</key>
+			<string>DrinkMixer</string>
+			<key>name</key>
+			<string>Thomas P</string>
+			<key>youtube</key>
+			<string>Q-6HiabgIKc</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Check My Dress</string>
+			<key>name</key>
+			<string>Daniele Bernardini</string>
+			<key>youtube</key>
+			<string>0tVxuzcsET8</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>TumbleBoard</string>
+			<key>name</key>
+			<string>Luca Kaufmann</string>
+			<key>youtube</key>
+			<string>0DudxIr6Rks</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>eaGeierApp</string>
+			<key>name</key>
+			<string>Martin Mandl</string>
+			<key>youtube</key>
+			<string>zBqV0cBc_-s</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>IOS Counter1</string>
+			<key>name</key>
+			<string>Don Waters</string>
+			<key>youtube</key>
+			<string>y9of0pEh_CA</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>iKeepHerHappy</string>
+			<key>name</key>
+			<string>Wolfgang Kamradek</string>
+			<key>youtube</key>
+			<string>UyyWFkiWYtY</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Minetris</string>
+			<key>name</key>
+			<string>Kalin Zahariev</string>
+			<key>youtube</key>
+			<string>jtHxW0ciHwo</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>TeamUpSmart</string>
+			<key>name</key>
+			<string>Gerd Moe-Behrens</string>
+			<key>youtube</key>
+			<string>Rvd4lZsgBq4</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Stint</string>
+			<key>name</key>
+			<string>S.RAZA</string>
+			<key>youtube</key>
+			<string>YSH3Vg8EixI</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Haik</string>
+			<key>name</key>
+			<string>Chris Johnson Bidler</string>
+			<key>youtube</key>
+			<string>APNKYMl-Tfk</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>WellThot Note</string>
+			<key>name</key>
+			<string>Mark Schwenk</string>
+			<key>youtube</key>
+			<string>rVsm9lf4oTk</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>MinDcard</string>
+			<key>name</key>
+			<string>JimBudet</string>
+			<key>youtube</key>
+			<string>jewARKmA_Ww</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>UTATracker</string>
+			<key>name</key>
+			<string>Ravi Alla</string>
+			<key>youtube</key>
+			<string>qnYChkXx75o</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>buffalo reader</string>
+			<key>name</key>
+			<string>Laura Gutman</string>
+			<key>youtube</key>
+			<string>xgGAFswcWJU</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Chronounce</string>
+			<key>name</key>
+			<string>John Davison</string>
+			<key>youtube</key>
+			<string>ZkS7pHyUg90</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>TennisAssist</string>
+			<key>name</key>
+			<string>Sven Charleer</string>
+			<key>youtube</key>
+			<string>UClFSD_gxR0</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>The Happy Teacher Readers Workshop</string>
+			<key>name</key>
+			<string>Drew Rosenberg</string>
+			<key>youtube</key>
+			<string>yheohEwVZRE</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>WorkrHelpr</string>
+			<key>name</key>
+			<string>Taylor Halliday</string>
+			<key>youtube</key>
+			<string>DLAZm4WIifw</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>CheckMyDress</string>
+			<key>name</key>
+			<string>Daniele Bernardini</string>
+			<key>youtube</key>
+			<string>kW9sVSeuc58</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>Yachtie</string>
+			<key>name</key>
+			<string>Rob Woodgate</string>
+			<key>youtube</key>
+			<string>uWixtDx1r7Y</string>
+		</dict>
+	</array>
+	<key>title</key>
+	<string>CodingTogether</string>
+	<key>version</key>
+	<integer>1</integer>
+</dict>
 </plist>
