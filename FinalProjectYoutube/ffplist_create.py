@@ -25,10 +25,13 @@ def readTextData( filename ):
                 tmp = {}
                 state = 0
             elif (re.match('^#', line)):
-                tmp={}
+                pass
             else:
                 tmp[ tags[state] ] = line
                 state = state + 1
+    if (state > 2):
+        ctclass.append(tmp)
+
     return ctclass
 
 if __name__ == '__main__':
