@@ -5,7 +5,7 @@
 	<key>date</key>
 	<date>2012-08-31T11:26:54Z</date>
 	<key>description</key>
-	<string>Stanford CS193p 2011Fall</string>
+	<string>Coding Together Summer2012</string>
 	<key>students</key>
 	<array>
 		<dict>
@@ -170,7 +170,7 @@
 		</dict>
 	</array>
 	<key>title</key>
-	<string>CodingTogether</string>
+	<string>Coding Together: Apps for iPhone and iPad </string>
 	<key>version</key>
 	<integer>1</integer>
 </dict>
