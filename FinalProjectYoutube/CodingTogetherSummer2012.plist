@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key><string>Kalin Zahariev</string>
+		<key>app</key><string>Minetris</string>
+		<key>youtube</key><string>jtHxW0ciHwo</string>
+	</dict>
+
+	<dict>
+		<key>name</key><string>Gerd Moe-Behrens</string>
+		<key>app</key><string>TeamUpSmart</string>
+		<key>youtube</key><string>Rvd4lZsgBq4</string>
+	</dict>
+
+
+
+
+	<dict>
+		<key>name</key><string>S.RAZA</string>
+		<key>app</key><string>Stint</string>
+		<key>youtube</key><string>YSH3Vg8EixI</string>
+	</dict>
+
+
+
+
+	<dict>
+		<key>name</key><string>Chris Johnson Bidler</string>
+		<key>app</key><string>Haik</string>
+		<key>youtube</key><string>APNKYMl-Tfk</string>
+	</dict>
+
+
+
+
+	<dict>
+		<key>name</key><string>Mark Schwenk</string>
+		<key>app</key><string>WellThot Note</string>
+		<key>youtube</key><string>rVsm9lf4oTk</string>
+	</dict>
+
+
+	<dict>
+		<key>name</key><string>JimBudet</string>
+		<key>app</key><string>MinDcard</string>
+		<key>youtube</key><string>jewARKmA_Ww</string>
+	</dict>
+
+
+
+
+	<dict>
+		<key>name</key><string>Rob Woodgate</string>
+		<key>app</key><string>Yachtie</string>
+		<key>youtube</key><string>uWixtDx1r7Y</string>
+	</dict>
+
+
+
+
+	<dict>
+		<key>name</key><string>Daniele Bernardini</string>
+		<key>app</key><string>CheckMyDress</string>
+		<key>youtube</key><string>http://www.checkmydress.com</string>
+	</dict>
+
+
+
+
+
+</array>
+</plist>
