@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>date</key>
-	<date>2012-08-31T11:26:54Z</date>
+	<date>2012-08-31T13:31:50Z</date>
 	<key>description</key>
-	<string>Coding Together Summer2012</string>
+	<string>Coding Together: Apps for iPhone and iPad</string>
 	<key>students</key>
 	<array>
 		<dict>
@@ -160,17 +160,9 @@
 			<key>youtube</key>
 			<string>kW9sVSeuc58</string>
 		</dict>
-		<dict>
-			<key>app</key>
-			<string>Yachtie</string>
-			<key>name</key>
-			<string>Rob Woodgate</string>
-			<key>youtube</key>
-			<string>uWixtDx1r7Y</string>
-		</dict>
 	</array>
 	<key>title</key>
-	<string>Coding Together: Apps for iPhone and iPad </string>
+	<string>Coding Together Summer2012</string>
 	<key>version</key>
 	<integer>1</integer>
 </dict>
