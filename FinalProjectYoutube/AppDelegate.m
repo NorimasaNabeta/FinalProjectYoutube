@@ -9,6 +9,19 @@
 #import "AppDelegate.h"
 
 @implementation AppDelegate
+@synthesize imageCache = _imageCache;
+
+- (NSCache*) imageCache
+{
+    if(_imageCache == nil){
+        _imageCache = [[NSCache alloc] init];
+        [_imageCache setName:@"ThumnailImageCache"];
+        [_imageCache setCountLimit:100];
+        [_imageCache setTotalCostLimit:1500000];
+        [_imageCache setEvictsObjectsWithDiscardedContent:YES];
+    }
+    return _imageCache;
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

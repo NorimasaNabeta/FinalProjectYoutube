@@ -6,6 +6,17 @@
 # @1785 Submitting Final Project Videos
 #
 
+# NOTATIONS:
+# * comment line is start with '#'.
+# >>
+# >>@            -- start record marker
+# >>HellowWorld  -- app name
+# >>ABCxyz123q   -- YouTube video id
+# >>John Smith   -- student name
+# >>
+# >>
+# >>
+
 @
 DrinkMixer
 Q-6HiabgIKc
@@ -105,5 +116,11 @@ Daniele Bernardini
 Yachtie
 uWixtDx1r7Y
 Rob Woodgate
+
+@
+ircDDB
+ScjNNUtIzgg
+Tycho Schenkeveld
+
 
 

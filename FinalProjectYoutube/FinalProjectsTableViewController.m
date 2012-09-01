@@ -9,6 +9,8 @@
 #import "FinalProjectsTableViewController.h"
 #import "FinalProjectsYouTubeViewController.h"
 
+#import "AppDelegate.h"
+
 @interface FinalProjectsTableViewController ()
 @property (nonatomic,strong) NSArray *students;
 @end
@@ -61,12 +63,30 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     NSDictionary *entry = [self.students objectAtIndex:indexPath.row];
+    NSString *videoID = [entry objectForKey:@"youtube"];
+    NSString *appID = [entry objectForKey:@"app"];
     cell.textLabel.text = [entry objectForKey:@"name"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ [%@]", [entry objectForKey:@"app"],[entry objectForKey:@"youtube"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ [%@]", appID,videoID];
+   
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    UIImage *image = [[appDelegate imageCache] objectForKey:videoID];
+    if (image) { cell.imageView.image = image;}
+    else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/2.jpg", videoID]];
+            NSData *data = [NSData dataWithContentsOfURL:url];
+            UIImage *image = [UIImage imageWithData:data];
+            [[appDelegate imageCache] setObject:image forKey:videoID];
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                cell.imageView.image = image;
+            });
+        });
+    }
     
     return cell;
 }
 
+// http://img/youtube/com/vi/Q-6HiabgIKc/2.jpg
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
