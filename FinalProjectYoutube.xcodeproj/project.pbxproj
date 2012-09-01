@@ -30,6 +30,20 @@
 		F2DFB42E15F1D7B900EACB1D /* crimson.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DFB42D15F1D7B900EACB1D /* crimson.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		F2DFB44F15F2D22D00EACB1D /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			filePatterns = "generate plist";
+			fileType = pattern.proxy;
+			isEditable = 1;
+			outputFiles = (
+				$INPUT_FILE_PATH,
+			);
+			script = "python $INPUT_FILE_DIR/ffplist_create.py $INPUT_FILE_DIR/studentlist.txt $INPUT_FILE_PATH\nbuiltin-copyPlist\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		F22FEF9A15F0504300099431 /* FinalProjectYoutube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProjectYoutube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F22FEF9E15F0504300099431 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -60,6 +74,8 @@
 		F2B6B98415F1914000E45A0A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 		F2B6B98515F1914000E45A0A /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = ../iTunesArtwork; sourceTree = "<group>"; };
 		F2DFB42D15F1D7B900EACB1D /* crimson.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = crimson.png; sourceTree = "<group>"; };
+		F2DFB44C15F2CAAF00EACB1D /* pil_thumbnail.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = pil_thumbnail.py; sourceTree = "<group>"; };
+		F2DFB45015F2D62D00EACB1D /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +122,7 @@
 		F22FEFA415F0504300099431 /* FinalProjectYoutube */ = {
 			isa = PBXGroup;
 			children = (
+				F2DFB45015F2D62D00EACB1D /* README */,
 				F22FEFAD15F0504300099431 /* AppDelegate.h */,
 				F22FEFAE15F0504300099431 /* AppDelegate.m */,
 				F22FEFC415F050F200099431 /* FinalProjectsTableViewController.h */,
@@ -135,6 +152,7 @@
 				F22FEFC015F050DC00099431 /* CodingTogetherSummer2012.plist */,
 				F22FEFC115F050DC00099431 /* darkviolet.png */,
 				F2B6B97615F0F4AC00E45A0A /* ffplist_create.py */,
+				F2DFB44C15F2CAAF00EACB1D /* pil_thumbnail.py */,
 				F2B6B97715F0F4AC00E45A0A /* studentlist.txt */,
 				F2DFB42D15F1D7B900EACB1D /* crimson.png */,
 				F22FEFAA15F0504300099431 /* main.m */,
@@ -155,6 +173,7 @@
 				F22FEF9815F0504300099431 /* Resources */,
 			);
 			buildRules = (
+				F2DFB44F15F2D22D00EACB1D /* PBXBuildRule */,
 			);
 			dependencies = (
 			);

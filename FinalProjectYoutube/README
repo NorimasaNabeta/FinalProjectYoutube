@@ -1,0 +1,10 @@
+## Welcome to the FinalProjectYoutube App
+
+You can change the display entries with editing the text file on Xcode
+
+ FinalProjectYoutube/Supporting Files/studentlist.txt
+
+then Xcode build rule in this project executes the python script 'ffplist_create.py', to create the plist file 'CodingTogetherSummer2012.plist'. 
+for more detail, TARGETS/FinalProjectYoutube>>Build Rules>>Files 'generating plist' using Script
+
+

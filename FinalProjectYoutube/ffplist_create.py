@@ -2,7 +2,8 @@
 #
 # Time-stamp: <2012-08-31 22:31:46 NorimasaNabeta>
 #
-
+import sys
+import os.path
 import plistlib
 import datetime
 import time
@@ -33,15 +34,24 @@ def readTextData( filename ):
         ctclass.append(tmp)
 
     return ctclass
-
+#
+#
+#
 if __name__ == '__main__':
-    output_pl = dict(
+    if len(sys.argv) > 2 :
+        inputTextDatafile = sys.argv[1]
+        outputPlistFile   = sys.argv[2]
+    else:
+        inputTextDatafile = './studentlist.txt'
+        outputPlistFile   = './CodingTogetherSummer2012.plist'
+
+    outputPlist = dict(
         title = "Coding Together Summer2012",
         description = "Coding Together: Apps for iPhone and iPad", 
         date = datetime.datetime.fromtimestamp(time.mktime(time.gmtime())),
         version = 1,
-        students = readTextData('studentlist.txt') 
+        students = readTextData(inputTextDatafile) 
         )
-    plistlib.writePlist(output_pl, 'CodingTogetherSummer2012.plist')
+    plistlib.writePlist(outputPlist, outputPlistFile)
 
 
