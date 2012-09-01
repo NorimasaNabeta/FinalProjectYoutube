@@ -27,6 +27,26 @@
     return self;
 }
 
+- (void) preFetchThumbnails
+{
+    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
+    for (NSDictionary *entry in self.students) {
+        NSString *videoID = [entry objectForKey:@"youtube"];
+        UIImage *image = [[appDelegate imageCache] objectForKey:videoID];
+        if (! image) {
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/2.jpg", videoID]];
+                NSData *data = [NSData dataWithContentsOfURL:url];
+                UIImage *image = [UIImage imageWithData:data];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    [[appDelegate imageCache] setObject:image forKey:videoID];
+                });
+            });
+        }
+    }
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -36,6 +56,8 @@
     NSDictionary *plist = [[NSDictionary alloc] initWithContentsOfURL:url];
     self.students = [plist objectForKey:@"students"];
     self.title = [plist objectForKey:@"description"];
+
+    [self preFetchThumbnails];
 }
 
 - (void)viewDidUnload
@@ -76,8 +98,8 @@
             NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/2.jpg", videoID]];
             NSData *data = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:data];
-            [[appDelegate imageCache] setObject:image forKey:videoID];
             dispatch_sync(dispatch_get_main_queue(), ^{
+                [[appDelegate imageCache] setObject:image forKey:videoID];
                 cell.imageView.image = image;
             });
         });
