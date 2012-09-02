@@ -35,7 +35,7 @@
 		F2DFB44F15F2D22D00EACB1D /* PBXBuildRule */ = {
 			isa = PBXBuildRule;
 			compilerSpec = com.apple.compilers.proxy.script;
-			filePatterns = "generate plist";
+			filePatterns = studentlist.txt;
 			fileType = pattern.proxy;
 			isEditable = 1;
 			outputFiles = (

@@ -27,6 +27,7 @@
     return self;
 }
 
+#define YOUTUBE_THUMBNAIL2  @"http://img.youtube.com/vi/%@/2.jpg"
 - (void) preFetchThumbnails
 {
     UIImage *dummy = [UIImage imageNamed:@"crimson.png"];
@@ -37,10 +38,11 @@
         if (! image) {
             [[appDelegate imageCache] setObject:dummy forKey:videoID];
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/2.jpg", videoID]];
+                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:YOUTUBE_THUMBNAIL2, videoID]];
                 NSData *data = [NSData dataWithContentsOfURL:url];
                 UIImage *image = [UIImage imageWithData:data];
                 dispatch_sync(dispatch_get_main_queue(), ^{
+                    // TODO: if failed to fetch, remove dummy image from the cache.
                     [[appDelegate imageCache] setObject:image forKey:videoID];
                     [self.tableView reloadData];
                 });
@@ -104,6 +106,7 @@
             NSData *data = [NSData dataWithContentsOfURL:url];
             UIImage *image = [UIImage imageWithData:data];
             dispatch_sync(dispatch_get_main_queue(), ^{
+                // TODO: if failed to fetch, remove dummy image from the cache.
                 [[appDelegate imageCache] setObject:image forKey:videoID];
                 cell.imageView.image = image;
                 [self.tableView reloadData];
