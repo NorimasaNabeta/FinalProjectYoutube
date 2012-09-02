@@ -28,6 +28,7 @@
 		F2B6B98D15F1914000E45A0A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F2B6B98415F1914000E45A0A /* Icon@2x.png */; };
 		F2B6B98E15F1914000E45A0A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = F2B6B98515F1914000E45A0A /* iTunesArtwork */; };
 		F2DFB42E15F1D7B900EACB1D /* crimson.png in Resources */ = {isa = PBXBuildFile; fileRef = F2DFB42D15F1D7B900EACB1D /* crimson.png */; };
+		F2DFB45115F2E1D800EACB1D /* studentlist.txt in Sources */ = {isa = PBXBuildFile; fileRef = F2B6B97715F0F4AC00E45A0A /* studentlist.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -241,6 +242,7 @@
 				F22FEFAF15F0504300099431 /* AppDelegate.m in Sources */,
 				F22FEFC815F050F200099431 /* FinalProjectsTableViewController.m in Sources */,
 				F22FEFC915F050F200099431 /* FinalProjectsYouTubeViewController.m in Sources */,
+				F2DFB45115F2E1D800EACB1D /* studentlist.txt in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

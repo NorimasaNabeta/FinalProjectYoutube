@@ -8,3 +8,4 @@ then Xcode build rule in this project executes the python script 'ffplist_create
 for more detail, TARGETS/FinalProjectYoutube>>Build Rules>>Files 'generating plist' using Script
 
 
+http://stackoverflow.com/questions/8458009/xcode-4-custom-build-step-before-compile

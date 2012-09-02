@@ -122,5 +122,21 @@ ircDDB
 ScjNNUtIzgg
 Tycho Schenkeveld
 
+@
+MeasureCamera
+G-yF83jb2FY
+John Beales
 
+@
+iSymmetry
+NCY9b1jQIJI
+David Crooks
 
+@
+CosyCounter-01
+YImoxiLZY-s
+Arno Bost
+
+#
+# EOF
+#

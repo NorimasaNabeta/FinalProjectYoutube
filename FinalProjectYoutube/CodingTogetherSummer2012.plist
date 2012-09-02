@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>date</key>
-	<date>2012-09-01T23:25:30Z</date>
+	<date>2012-09-02T00:09:51Z</date>
 	<key>description</key>
 	<string>Coding Together: Apps for iPhone and iPad</string>
 	<key>students</key>
@@ -175,6 +175,30 @@
 			<string>Tycho Schenkeveld</string>
 			<key>youtube</key>
 			<string>ScjNNUtIzgg</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>MeasureCamera</string>
+			<key>name</key>
+			<string>John Beales</string>
+			<key>youtube</key>
+			<string>G-yF83jb2FY</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>iSymmetry</string>
+			<key>name</key>
+			<string>David Crooks</string>
+			<key>youtube</key>
+			<string>NCY9b1jQIJI</string>
+		</dict>
+		<dict>
+			<key>app</key>
+			<string>CosyCounter-01</string>
+			<key>name</key>
+			<string>Arno Bost</string>
+			<key>youtube</key>
+			<string>YImoxiLZY-s</string>
 		</dict>
 	</array>
 	<key>title</key>
