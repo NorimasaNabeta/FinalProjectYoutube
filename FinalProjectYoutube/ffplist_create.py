@@ -53,5 +53,10 @@ if __name__ == '__main__':
         students = readTextData(inputTextDatafile) 
         )
     plistlib.writePlist(outputPlist, outputPlistFile)
+    # convert into the binary plist form
+    # https://developer.apple.com/library/mac/#documentation/Darwin/Reference/ManPages/man1/plutil.1.html
+    # plutil -convert binary1 outputPlistFile
+    os.system(('plutil -convert binary1 %s' % outputPlistFile))
+
 
 
