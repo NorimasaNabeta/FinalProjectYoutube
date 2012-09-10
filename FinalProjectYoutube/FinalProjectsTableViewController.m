@@ -27,30 +27,6 @@
     return self;
 }
 
-#define YOUTUBE_THUMBNAIL2  @"http://img.youtube.com/vi/%@/2.jpg"
-- (void) preFetchThumbnails
-{
-    UIImage *dummy = [UIImage imageNamed:@"crimson.png"];
-    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
-    for (NSDictionary *entry in self.students) {
-        NSString *videoID = [entry objectForKey:@"youtube"];
-        UIImage *image = [[appDelegate imageCache] objectForKey:videoID];
-        if (! image) {
-            [[appDelegate imageCache] setObject:dummy forKey:videoID];
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:YOUTUBE_THUMBNAIL2, videoID]];
-                NSData *data = [NSData dataWithContentsOfURL:url];
-                UIImage *image = [UIImage imageWithData:data];
-                dispatch_sync(dispatch_get_main_queue(), ^{
-                    // TODO: if failed to fetch, remove dummy image from the cache.
-                    [[appDelegate imageCache] setObject:image forKey:videoID];
-                    [self.tableView reloadData];
-                });
-            });
-        }
-    }
-}
-
 
 - (void)viewDidLoad
 {
@@ -61,8 +37,6 @@
     NSDictionary *plist = [[NSDictionary alloc] initWithContentsOfURL:url];
     self.students = [plist objectForKey:@"students"];
     self.title = [plist objectForKey:@"description"];
-
-    [self preFetchThumbnails];
 }
 
 - (void)viewDidUnload
@@ -95,24 +69,11 @@
     cell.textLabel.text = [entry objectForKey:@"name"];
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ [%@]", appID,videoID];
    
-    UIImage *dummy = [UIImage imageNamed:@"crimson.png"];
-    id appDelegate = (id)[[UIApplication sharedApplication] delegate];
-    UIImage *image = [[appDelegate imageCache] objectForKey:videoID];
-    if (image) { cell.imageView.image = image;}
-    else {
-        [[appDelegate imageCache] setObject:dummy forKey:videoID];
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://img.youtube.com/vi/%@/2.jpg", videoID]];
-            NSData *data = [NSData dataWithContentsOfURL:url];
-            UIImage *image = [UIImage imageWithData:data];
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                // TODO: if failed to fetch, remove dummy image from the cache.
-                [[appDelegate imageCache] setObject:image forKey:videoID];
-                cell.imageView.image = image;
-                [self.tableView reloadData];
-            });
-        });
+    UIImage *thumbnail = [UIImage imageWithData:[entry objectForKey:@"thumbnail"]];
+    if (! thumbnail){
+        thumbnail = [UIImage imageNamed:@"crimson.png"];
     }
+    cell.imageView.image = thumbnail;
     
     return cell;
 }

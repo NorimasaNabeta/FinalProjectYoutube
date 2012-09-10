@@ -3,12 +3,30 @@
 # Time-stamp: <2012-08-31 22:31:46 NorimasaNabeta>
 #
 import sys
-import os.path
+import os
+import re
 import plistlib
 import datetime
 import time
-import re
+from urllib import urlretrieve
+import tempfile
 
+
+#
+#
+# http://img.youtube.com/vi/%@/2.jpg
+def fetchThumbnail( videoId ):
+    filePath=tempfile.mktemp(suffix = '.png')
+    urlretrieve(("http://img.youtube.com/vi/%s/2.jpg" % videoId), filePath)
+    imagef = open(filePath)
+    imageData = imagef.read()
+    imagef.close()
+    os.remove(filePath)
+    return plistlib.Data(imageData)
+
+#
+#
+#
 def readTextData( filename ):
     tags = [ 'app', 'youtube', 'name', '' ]
     f = open(filename)
@@ -22,6 +40,7 @@ def readTextData( filename ):
         if ( len(line) > 0 ):
             if (re.match('^@', line)):
                 if (state > 2):
+                    tmp[ 'thumbnail' ] = fetchThumbnail( tmp[ 'youtube' ] )
                     ctclass.append(tmp)
                 tmp = {}
                 state = 0
@@ -31,6 +50,7 @@ def readTextData( filename ):
                 tmp[ tags[state] ] = line
                 state = state + 1
     if (state > 2):
+        tmp[ 'thumbnail' ] = fetchThumbnail( tmp[ 'youtube' ] )
         ctclass.append(tmp)
 
     return ctclass
